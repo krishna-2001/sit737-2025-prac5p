@@ -1,0 +1,12 @@
+{
+  "name": "dockerised-node-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js app for SIT737 5.1P task",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
