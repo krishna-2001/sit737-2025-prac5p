@@ -1,18 +1,28 @@
-# sit737-2025-prac5p
 
-## 🚀 Dockerised Node.js Web Application
+---
 
-This is a simple Node.js app containerised with Docker and Docker Compose. It includes a basic health check.
+## 🛠️ Steps Taken
 
-### ✅ Features
+### 1️⃣ Setup the Application
 
-- Express web server
-- Dockerfile for containerization
-- Docker Compose with healthcheck
-- Clean project structure
+- Created a simple application (e.g., a Node.js web server).
+- Placed the code in the `app/` directory.
+- Ensured it listens on port 3000 and responds with basic text or JSON.
 
-### 🐳 To Run with Docker Compose
+### 2️⃣ Created Dockerfile
 
-```bash
-docker-compose up --build
-```
+- Created a `Dockerfile` in the root directory to define the image build process.
+- The Dockerfile includes:
+  - Base image (e.g., `node:18-alpine`)
+  - Copying of source code
+  - Installation of dependencies
+  - Port exposure and default start command
+
+**Sample Dockerfile:**
+```Dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY app/ .
+RUN npm install
+EXPOSE 3000
+CMD ["node", "index.js"]
